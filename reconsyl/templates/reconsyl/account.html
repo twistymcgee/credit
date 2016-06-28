@@ -1,0 +1,10 @@
+<a href="{% url 'index' %}">Reconsyl</a>
+<br/>
+<br/>
+Account details for {{ account }}
+<br/>
+<br/>
+{{ account.transact_set.count }} transaction(s) are currently in the account.
+<br/>
+<br/>
+<a href="{% url 'ledger' account.id %}">View Ledger</a>

@@ -1,0 +1,10 @@
+<a href="{% url 'index' %}">Reconsyl</a> | <a href="{% url 'account' account.id %}">Back</a>
+<br/>
+<br/>
+Ledger for {{ account }}
+
+<ul>
+{% for transact in account.transact_set.all %}
+    <li>{{ transact.id }}</li>
+{% endfor %}
+</ul>
