@@ -1,0 +1,9 @@
+<a href="{% url 'reconsyl:index' %}">Reconsyl</a> | <a href="{% url 'reconsyl:ledger' transact.account.id %}">Back</a>
+<br/>
+<br/>
+Transaction number {{ transact.id }}
+
+<form method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>

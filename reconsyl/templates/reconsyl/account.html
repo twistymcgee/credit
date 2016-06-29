@@ -1,4 +1,4 @@
-<a href="{% url 'index' %}">Reconsyl</a>
+<a href="{% url 'reconsyl:index' %}">Reconsyl</a>
 <br/>
 <br/>
 Account details for {{ account }}
@@ -7,4 +7,4 @@ Account details for {{ account }}
 {{ account.transact_set.count }} transaction(s) are currently in the account.
 <br/>
 <br/>
-<a href="{% url 'ledger' account.id %}">View Ledger</a>
+<a href="{% url 'reconsyl:ledger' account.id %}">View Ledger</a>

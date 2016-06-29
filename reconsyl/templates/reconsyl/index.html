@@ -1,7 +1,7 @@
 {% if account_list %}
     <ul>
     {% for account in account_list %}
-        <li><a href="{% url 'account' account.id %}">{{ account.name_text }}</a></li>
+        <li><a href="{% url 'reconsyl:account' account.id %}">{{ account.name_text }}</a></li>
     {% endfor %}
     </ul>
 {% else %}

@@ -1,10 +1,27 @@
-<a href="{% url 'index' %}">Reconsyl</a> | <a href="{% url 'account' account.id %}">Back</a>
+<a href="{% url 'reconsyl:index' %}">Reconsyl</a> | <a href="{% url 'reconsyl:account' account.id %}">Back</a>
 <br/>
 <br/>
 Ledger for {{ account }}
 
-<ul>
-{% for transact in account.transact_set.all %}
-    <li>{{ transact.id }}</li>
-{% endfor %}
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Category</th>
+      <th>Person</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for transact in account.transact_set.all %}
+        <tr>
+          <td>{{ transact.id }}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="{% url 'reconsyl:transact' transact.id %}">Edit</a></td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
